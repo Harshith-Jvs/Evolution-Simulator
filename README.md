@@ -50,8 +50,8 @@ Potential Improvements:
 
 Author:
 -------
-Jvs Harshtih
-GitHub: https://github.com/Harshith-Jvs
+Jvs Harshtih<br>
+GitHub: https://github.com/Harshith-Jvs<br>
 Email: harshith.jvs2006@gmail.com
 
 
