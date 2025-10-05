@@ -50,9 +50,9 @@ Potential Improvements:
 
 Author:
 -------
-Jvs Harshtih<br>
+Name:   Jvs Harshtih<br>
 GitHub: https://github.com/Harshith-Jvs<br>
-Email: harshith.jvs2006@gmail.com
+Email:  harshith.jvs2006@gmail.com
 
 
 
