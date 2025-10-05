@@ -51,8 +51,8 @@ Potential Improvements:
 Author:
 -------
 Jvs Harshtih
-https://github.com/Harshith-Jvs
-harshith.jvs2006@gmail.com
+GitHub: https://github.com/Harshith-Jvs
+Email: harshith.jvs2006@gmail.com
 
 
 
