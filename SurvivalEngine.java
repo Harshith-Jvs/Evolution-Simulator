@@ -133,8 +133,10 @@ public class SurvivalEngine{
         double reproduceEnergyCostPrey = 2.0;
         double reproduceEnergyCostPred = 2.5;
 
+        // reproduction for prey 
         for (Prey prey : preyPopulation){
         if (prey.energy > energyThreshold) {
+        	// random probability comparision for that prey to reproduce
             double reproduceProbability = prey.energy / (prey.energy + 8); 
             if (Math.random() < reproduceProbability) {
                 NeuralNetwork childBrain = mutate(prey.brain, mutationRate);
@@ -150,8 +152,10 @@ public class SurvivalEngine{
         } 
         }
 
+        // reproduction for predator
         for (Predator predator : predatorPopulation) {
             if (predator.energy > energyThreshold) {
+            	// random probability comparision for that prey to reproduce
                 double reproduceProbability = predator.energy / (predator.energy + 10);
                 if (Math.random() < reproduceProbability) {
                     NeuralNetwork childBrain = mutate(predator.brain, mutationRate);
@@ -195,6 +199,7 @@ public class SurvivalEngine{
                 ArrayList<Prey> nextPreyGen,
                 ArrayList<Predator> nextPredatorGen){
 
+    	// first clean the original population and add new
         preyPopulation.clear();
         preyPopulation.addAll(nextPreyGen);
     
@@ -212,26 +217,28 @@ public class SurvivalEngine{
             parentBrain.outputSize
         );
 
+        // chaning the weights for the child neural network
         for (int i = 0; i < parentBrain.w1.length; i++)
             for (int j = 0; j < parentBrain.w1[i].length; j++)
-                childBrain.w1[i][j] = mutateTrait(parentBrain.w1[i][j], mutationRate);
+                childBrain.w1[i][j] = mutateWeight(parentBrain.w1[i][j], mutationRate);
 
         for (int i = 0; i < parentBrain.w2.length; i++)
             for (int j = 0; j < parentBrain.w2[i].length; j++)
-                childBrain.w2[i][j] = mutateTrait(parentBrain.w2[i][j], mutationRate);
+                childBrain.w2[i][j] = mutateWeight(parentBrain.w2[i][j], mutationRate);
 
         for (int i = 0; i < parentBrain.w3.length; i++)
             for (int j = 0; j < parentBrain.w3[i].length; j++)
-                childBrain.w3[i][j] = mutateTrait(parentBrain.w3[i][j], mutationRate);
+                childBrain.w3[i][j] = mutateWeight(parentBrain.w3[i][j], mutationRate);
 
+        // changing the biases for the child neural network 
         for (int i = 0; i < parentBrain.bias_w1.length; i++)
-            childBrain.bias_w1[i] = mutateTrait(parentBrain.bias_w1[i], mutationRate);
+            childBrain.bias_w1[i] = mutateWeight(parentBrain.bias_w1[i], mutationRate);
 
         for (int i = 0; i < parentBrain.bias_w2.length; i++)
-            childBrain.bias_w2[i] = mutateTrait(parentBrain.bias_w2[i], mutationRate);
+            childBrain.bias_w2[i] = mutateWeight(parentBrain.bias_w2[i], mutationRate);
 
         for (int i = 0; i < parentBrain.bias_w3.length; i++)
-            childBrain.bias_w3[i] = mutateTrait(parentBrain.bias_w3[i], mutationRate);
+            childBrain.bias_w3[i] = mutateWeight(parentBrain.bias_w3[i], mutationRate);
 
         return childBrain;
     }
@@ -244,5 +251,10 @@ public class SurvivalEngine{
         return Math.max(0.1, Math.min(10.0, result));
     }
 
-
+    // mutation method for weights
+    public double mutateWeight(double weight, double mutationRate) {
+    	double mutation = new Random().nextGaussian() * mutationRate;
+    	double result = weight + mutation;
+    	return Math.max(-1.0, Math.min(1.0, result));
+	}
 }
