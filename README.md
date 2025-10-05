@@ -1,6 +1,3 @@
-README.txt
-===========
-
 Project Title: Evolutionary Predator-Prey Simulation  
 ------------------------------------------------------
 
