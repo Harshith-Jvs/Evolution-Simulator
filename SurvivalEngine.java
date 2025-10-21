@@ -243,18 +243,18 @@ public class SurvivalEngine{
         return childBrain;
     }
 
-
+	// mutation method for weights
+    public double mutateWeight(double weight, double mutationRate) {
+    	double mutation = new Random().nextGaussian() * mutationRate;
+    	double result = weight + mutation;
+    	return Math.max(-1.0, Math.min(1.0, result));
+	}
+	
     // mutation method for traits
     public double mutateTrait(double trait, double mutationRate) {
         double mutation = new Random().nextGaussian() * mutationRate;
         double result = trait + mutation;
         return Math.max(0.1, Math.min(10.0, result));
     }
-
-    // mutation method for weights
-    public double mutateWeight(double weight, double mutationRate) {
-    	double mutation = new Random().nextGaussian() * mutationRate;
-    	double result = weight + mutation;
-    	return Math.max(-1.0, Math.min(1.0, result));
-	}
 }
+
