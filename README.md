@@ -46,6 +46,7 @@ Potential Improvements:
 - Implement a GUI for better visualization.
 - Add more environmental factors (e.g., food scarcity, weather effects).
 - Make mortality rate dynamic based on environmental pressure.
+- Add a separate neural network for prey and predator.
 - Introduce more species for complex ecosystem simulation.
 
 Author:
