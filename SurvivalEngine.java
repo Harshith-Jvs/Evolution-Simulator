@@ -9,16 +9,16 @@ public class SurvivalEngine{
                 ArrayList<Predator> predatorPopulation){
 
         // energy cost for a decision
-		final double runCostPrey = 3.5;
-    	final double runCostPred = 3.0;
-    	final double fightCostPrey = 5.0;
-    	final double fightCostPred = 3.0;
+		final double runCostPrey = 1.0;
+    	final double runCostPred = 1.5;
+    	final double fightCostPrey = 1.5;
+    	final double fightCostPred = 2.5;
     	final double restGain = 0.2;
-    	final double foodGain = 1.5;
+    	final double foodGain = 1.2;
 
         // mortality rates for random deaths based on current population
-        final double mortalityRatePrey = Math.min(0.5, 0.02 + (preyPopulation.size() / 1000.0));
-		final double mortalityRatePredator = Math.min(0.5, 0.03 + (predatorPopulation.size() / 1000.0));
+        final double mortalityRatePrey = Math.min(0.2, 0.005 + (preyPopulation.size() / 2500.0));
+		final double mortalityRatePredator = Math.min(0.2, 0.03 + (predatorPopulation.size() / 1500.0));
 
     	// looping through each predator to all preys
     	for (int i = 0; i < predatorPopulation.size(); i++) {
@@ -31,8 +31,8 @@ public class SurvivalEngine{
         	    Prey prey = preyPopulation.get(j);
 				
 				// Run, Fight, Rest 
-        	    String preyDec = prey.decide();
-        	    String predDec = predator.decide();
+                String preyDec = prey.decide();
+                String predDec = predator.decide();
 	
         	    boolean preyDies = false;
         	    boolean predatorDies = false;
@@ -116,8 +116,8 @@ public class SurvivalEngine{
         predatorPopulation.removeIf(pred -> Math.random() < mortalityRatePredator);
 
         // energy decay for metabolism
-        for (Prey prey : preyPopulation) prey.energy -= 0.5;
-        for (Predator predator : predatorPopulation) predator.energy -= 0.8;
+        for (Prey prey : preyPopulation) prey.energy -= 0.4;
+        for (Predator predator : predatorPopulation) predator.energy -= 1.2;
 	}
 
 
@@ -129,15 +129,15 @@ public class SurvivalEngine{
                 ArrayList<Predator> nextPredatorGen,
                 double mutationRate){
 
-        double energyThreshold = 5.0;
-        double reproduceEnergyCostPrey = 2.0;
-        double reproduceEnergyCostPred = 2.5;
+        double energyThreshold = 3.5;
+        double reproduceEnergyCostPrey = 1.8;
+        double reproduceEnergyCostPred = 3.0;
 
         // reproduction for prey 
         for (Prey prey : preyPopulation){
         if (prey.energy > energyThreshold) {
         	// random probability comparision for that prey to reproduce
-            double reproduceProbability = prey.energy / (prey.energy + 8); 
+            double reproduceProbability = prey.energy / (prey.energy + 10.0); 
             if (Math.random() < reproduceProbability) {
                 NeuralNetwork childBrain = mutate(prey.brain, mutationRate);
                 nextPreyGen.add(new Prey(
@@ -156,7 +156,7 @@ public class SurvivalEngine{
         for (Predator predator : predatorPopulation) {
             if (predator.energy > energyThreshold) {
             	// random probability comparision for that prey to reproduce
-                double reproduceProbability = predator.energy / (predator.energy + 10);
+                double reproduceProbability = predator.energy / (predator.energy + 10.0);
                 if (Math.random() < reproduceProbability) {
                     NeuralNetwork childBrain = mutate(predator.brain, mutationRate);
                     nextPredatorGen.add(new Predator(
