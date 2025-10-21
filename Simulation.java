@@ -9,6 +9,12 @@ public class Simulation {
         Scanner scanner = new Scanner(System.in);
         Random rand = new Random();
 
+        // nodes for each layer in neural network
+        final int inputNodes = 4;
+        final int layer1Nodes = 5;
+        final int layer2Nodes = 3;
+        final int outputNodes = 3;
+
         // ---------- Input parameters ---------
         System.out.print("Number of prey species: ");
         int numberOfPrey = scanner.nextInt();
@@ -16,7 +22,7 @@ public class Simulation {
         System.out.print("Number of predator species: ");
         int numberOfPredator = scanner.nextInt();
 
-        System.out.print("Generations: ");
+        System.out.print("Number of generations: ");
         int totalGenerations = scanner.nextInt();
 
         System.out.print("Mutation rate (0-1): ");
@@ -33,7 +39,7 @@ public class Simulation {
     		double strength = Math.round((rand.nextDouble() * (8.0 - 3.5) + 5.0) * 10.0) / 10.0;
     		double distance = Math.round((rand.nextDouble() * (8.0 - 2.5) + 2.5) * 10.0) / 10.0;
     		double energy = Math.round((rand.nextDouble() * (8.0 - 3.0) + 5.0) * 10.0) / 10.0;
-            preyPopulation.add(new Prey(speed, strength, energy, distance, new NeuralNetwork(4, 8, 5, 3)));
+            preyPopulation.add(new Prey(speed, strength, energy, distance, new NeuralNetwork(inputNodes, layer1Nodes, layer2Nodes, outputNodes)));
         }
 
         // adding predators to environment
@@ -42,16 +48,18 @@ public class Simulation {
     		double strength = Math.round((rand.nextDouble() * (10.0 - 5.0) + 5.0) * 10.0) / 10.0;
     		double distance = Math.round((rand.nextDouble() * (10.0 - 2.5) + 2.5) * 10.0) / 10.0;
     		double energy = Math.round((rand.nextDouble() * (10.0 - 3.0) + 5.0) * 10.0) / 10.0;
-            predatorPopulation.add(new Predator(speed, strength, energy, distance, new NeuralNetwork(4, 8, 5, 3)));
+            predatorPopulation.add(new Predator(speed, strength, energy, distance, new NeuralNetwork(inputNodes, layer1Nodes, layer2Nodes, outputNodes)));
         }
 
 
         // ---------------- GENERATION LOOP ------------------
         for(int gen = 1; gen <= totalGenerations; gen++){
 
+            // creating new array list for new population
             ArrayList<Prey> nextPreyGen = new ArrayList<>();
             ArrayList<Predator> nextPredatorGen = new ArrayList<>();
 
+            // starting formated art
   		    System.out.println("\n============================================");
             System.out.println("\t\tGeneration #" + gen);
             System.out.println("--------------------------------------------");
@@ -84,7 +92,8 @@ public class Simulation {
 
             // condition for extinction
             if (preyPopulation.size() == 0 || predatorPopulation.size() == 0) {
-                System.out.println("Extinction happened. Ending simulation.");
+                System.out.println("============================================\n");
+                System.out.println("Extinction happened. Ending simulation............");
                 break;
             }
 
