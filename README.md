@@ -7,6 +7,7 @@ Just as the **Bohr atomic model** doesn’t literally represent what a real atom
 this project doesn’t recreate real biological evolution — instead, it **abstracts** its logic.  
 It shows how **variation**, **selection**, and **inheritance** can drive the **emergence of adaptive intelligence** over generations.
 
+----------------
 
 ## 🧩 Core Concept
 The simulation explores two evolving digital species — **prey** and **predators** — that interact, survive, reproduce, and mutate across generations.  
@@ -89,7 +90,7 @@ Simulation output will show generation-by-generation statistics including:
 
 ## Author:
 Name:   Jvs Harshtih<br>
-GitHub: https://github.com/Harshith-Jvs<br>
 Email:  harshith.jvs2006@gmail.com
+GitHub: https://github.com/Harshith-Jvs<br>
 
 ----------------
