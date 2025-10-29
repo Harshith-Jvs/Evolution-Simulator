@@ -1,4 +1,5 @@
 # 🧠 Modeling the Evolution of Decision-Making Through Neuroevolutionary Algorithms
+-------------
 
 ## Overview
 This is a **Neuroevolution Simulation** based project that models how intelligent behavior can emerge from simple evolutionary rules.  
