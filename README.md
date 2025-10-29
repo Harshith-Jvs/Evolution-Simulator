@@ -1,5 +1,4 @@
 # 🧠 Modeling the Evolution of Decision-Making Through Neuroevolutionary Algorithms
--------------
 
 ## Overview
 This is a **Neuroevolution Simulation** based project that models how intelligent behavior can emerge from simple evolutionary rules.  
@@ -9,7 +8,6 @@ Just as the **Bohr atomic model** doesn’t literally represent what a real atom
 this project doesn’t recreate real biological evolution — instead, it **abstracts** its logic.  
 It shows how **variation**, **selection**, and **inheritance** can drive the **emergence of adaptive intelligence** over generations.
 
----
 
 ## 🧩 Core Concept
 The simulation explores two evolving digital species — **prey** and **predators** — that interact, survive, reproduce, and mutate across generations.  
@@ -18,7 +16,6 @@ Each creature has a **neural network brain** controlling its behavior, enabling 
 Through the iterative process of **neuroevolution**, the population naturally adapts to environmental pressures —  
 mirroring how, in nature, millions of years of evolution shaped the first decision-making systems in living organisms.
 
----
 
 ## ⚙️ Features
 
@@ -46,7 +43,6 @@ mirroring how, in nature, millions of years of evolution shaped the first decisi
 8. **Easy Configuration:**  
    Input species count, number of generations, and mutation rate directly from the console.
 
----
 
 ## 🗝️ Key Algorithms
 
@@ -62,19 +58,17 @@ mirroring how, in nature, millions of years of evolution shaped the first decisi
 - **Neural Network Logic:**  
   Implements a simple feedforward network with sigmoid activation to make decisions dynamically.
 
----
 
 ## 🧬 Biological Analogy
 This simulation is not a literal model of real evolution but a **computational mirror** of its principles.  
 While real organisms inherit **DNA blueprints**, here the digital creatures inherit **neural weights** — representing a compressed model of inherited learning.  
 It offers a glimpse into how **evolutionary pressure can give rise to adaptive decision-making**, much like how primitive nervous systems evolved in early life.
 
-> **A neuroevolutionary simulation modeling the emergence of adaptive decision-making in early life analogs.**
+> **A Neuroevolutionary simulation modeling the emergence of adaptive decision-making in early life analogs.**
 
----
 
 ## Project Structure
----
+
 - `Simulation.java` — main program, runs the simulation loop.
 - `SurvivalEngine.java` — contains survival phase, reproduction phase, mutation logic, and population management.
 - `NeuralNetwork.java` — defines the neural network brain for creatures, with random weights and biases.
@@ -88,7 +82,6 @@ Simulation output will show generation-by-generation statistics including:
 - Extinction events (if any)
 
 ## Author:
--------
 Name:   Jvs Harshtih<br>
 GitHub: https://github.com/Harshith-Jvs<br>
 Email:  harshith.jvs2006@gmail.com
