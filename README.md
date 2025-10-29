@@ -1,6 +1,5 @@
 # 🧠 Modeling the Evolution of Decision-Making Through Neuroevolutionary Algorithms
 
-## Overview
 This is a **Neuroevolution Simulation** based project that models how intelligent behavior can emerge from simple evolutionary rules.  
 It demonstrates how **evolutionary pressure** can give rise to **decision-making abilities**, using artificial neural systems as an **analogy for early nervous systems** that once evolved on Earth.
 
@@ -66,6 +65,7 @@ It offers a glimpse into how **evolutionary pressure can give rise to adaptive d
 
 > **A Neuroevolutionary simulation modeling the emergence of adaptive decision-making in early life analogs.**
 
+---
 
 ## Project Structure
 
@@ -74,12 +74,15 @@ It offers a glimpse into how **evolutionary pressure can give rise to adaptive d
 - `NeuralNetwork.java` — defines the neural network brain for creatures, with random weights and biases.
 - `Creature.java` — parent class for Prey and Predator classes.
 
+
 Simulation output will show generation-by-generation statistics including:
 - Survived population
 - Offspring population
 - Final population going into next generation
 - Prey/Predator ratio
 - Extinction events (if any)
+
+---
 
 ## Author:
 Name:   Jvs Harshtih<br>
