@@ -1,16 +1,13 @@
 # 🧠 Modeling the Evolution of Decision-Making Through Neuroevolutionary Algorithms
 
-This is a **Neuroevolution Simulation** based project that models how intelligent behavior can emerge from simple evolutionary rules.  
-It demonstrates how **evolutionary pressure** can give rise to **decision-making abilities**, using artificial neural systems as an **analogy for early nervous systems** that once evolved on Earth.
+This is a **Neuroevolution Simulation** based project that models how intelligent behavior can emerge from simple evolutionary rules. It demonstrates how **evolutionary pressure** can give rise to **decision-making abilities**, using artificial neural systems as an **analogy for early nervous systems** that once evolved on Earth.
 
-Just as the **Bohr atomic model** doesn’t literally represent what a real atoms look like but captures their core principles,  
-this project doesn’t recreate real biological evolution — instead, it **abstracts** its logic.  
-It shows how **variation**, **selection**, and **inheritance** can drive the **emergence of adaptive intelligence** over generations.
+Just as the **Bohr atomic model** doesn’t literally represent what a real atoms look like but captures their core principles, this project doesn’t recreate real biological evolution — instead, it **abstracts** its logic. It shows how **variation**, **selection**, and **inheritance** can drive the **emergence of adaptive intelligence** over generations.
 
 ----------------
 
 ## 🧩 Core Concept
-The simulation explores two evolving digital species — **prey** and **predators** — that interact, survive, reproduce, and mutate across generations.  
+The simulation explores two evolving digital species — **prey** and **predators** — that interact, survive, reproduce, and mutate across generations. 
 Each creature has a **neural network brain** controlling its behavior, enabling it to **decide** whether to run, fight, or rest based on energy and context.
 
 Through the iterative process of **neuroevolution**, the population naturally adapts to environmental pressures —  
@@ -90,7 +87,7 @@ Simulation output will show generation-by-generation statistics including:
 
 ## Author:
 Name:   Jvs Harshtih<br>
-Email:  harshith.jvs2006@gmail.com
-GitHub: https://github.com/Harshith-Jvs<br>
+Email:  harshith.jvs2006@gmail.com<br>
+GitHub: https://github.com/Harshith-Jvs
 
 ----------------
